@@ -21,6 +21,7 @@ RUN go install honnef.co/go/tools/cmd/staticcheck@latest
 RUN go install golang.org/x/tools/gopls@latest
 RUN go install github.com/swaggo/swag/cmd/swag@latest
 RUN go install golang.org/x/tools/cmd/godoc@latest
+RUN go install github.com/99designs/gqlgen@latest
 
 RUN curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin
 
