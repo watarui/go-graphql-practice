@@ -1,0 +1,27 @@
+name: Workflow
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: "stable"
+
+      - name: Show Docker containers (Connectivity test)
+        run: docker ps -a
+
+      - name: Build
+        run: go build -v ./...
+
+      - name: Run tests with coverage report output
+        run: go test -v ./... -coverprofile=coverage.out
+
+      - name: Collect code metrics
+        uses: k1LoW/octocov-action@v0

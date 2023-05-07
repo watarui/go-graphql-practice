@@ -1,0 +1,65 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Load server",
+      "command": "make",
+      "args": [
+        "load"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Run tests",
+      "command": "make",
+      "args": [
+        "test"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Run tests with coverage",
+      "command": "make",
+      "args": [
+        "test-cover"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Hot-reload server",
+      "command": "make",
+      "args": [
+        "hot-reload"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Update swagger.yaml",
+      "command": "make",
+      "args": [
+        "update-swagger"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Format swagger annotation",
+      "command": "make",
+      "args": [
+        "format-swagger"
+      ],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "silent",
+        "close": true
+      }
+    },
+    {
+      "label": "Load godoc",
+      "command": "make",
+      "args": [
+        "godoc"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}
